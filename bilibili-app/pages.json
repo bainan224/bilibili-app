@@ -1,0 +1,84 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style":  {
+				"navigationStyle":"custom"
+				}
+		}
+	    ,{
+            "path" : "pages/channel/channel",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/dynamic/dynamic",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/vip/vip",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/my/my",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#333333",
+		"selectedColor": "#FC5C82",
+		"backgroundColor": "#FFFFFF",
+		"borderStyle": "black",
+		"list": [{
+			"pagePath": "pages/index/index",
+			"text": "首页",
+			"iconPath": "static/tabbar/index.png",
+			"selectedIconPath": "static/tabbar/indexed.png"
+		}, {
+			"pagePath": "pages/channel/channel",
+			"text": "频道",
+			"iconPath": "static/tabbar/channel.png",
+			"selectedIconPath": "static/tabbar/channeled.png"
+		}, {
+			"pagePath": "pages/dynamic/dynamic",
+			"text": "动态",
+			"iconPath": "static/tabbar/dynamic.png",
+			"selectedIconPath": "static/tabbar/dynamiced.png"
+		}, {
+			"pagePath": "pages/vip/vip",
+			"text": "会员购",
+			"iconPath": "static/tabbar/vip.png",
+			"selectedIconPath": "static/tabbar/viped.png"
+		}, {
+			"pagePath": "pages/my/my",
+			"text": "我的",
+			"iconPath": "static/tabbar/my.png",
+			"selectedIconPath": "static/tabbar/myed.png"
+		}]
+	}
+}
