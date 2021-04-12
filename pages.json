@@ -73,22 +73,7 @@
 						}]
 					}
 				}
-            },
-			"path" : "pages/my/setting",
-			"style" :                                                                                    
-			{
-			    "navigationBarTitleText": "",
-				"app-plus": {
-					"titleNView": {
-						"buttons":[{
-						"float":"right",
-							"text": "\ue6c3   ",
-							"fontSrc": "/static/iconfont.ttf",
-							"fontSize":"25px"
-						}]
-					}
-				}
-			}
+            }
             
         }        
     ],

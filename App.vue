@@ -12,6 +12,6 @@
 	}
 </script>
 
-<style>
-	/*每个页面公共css */
+<style>/*每个页面公共css */
+@import "/common/iconfont.css";
 </style>
