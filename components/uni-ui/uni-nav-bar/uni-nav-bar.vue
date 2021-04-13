@@ -1,5 +1,4 @@
 <template>
-
 	<view class="uni-navbar">
 		<view :class="{'uni-navbar--fixed': fixed,'uni-navbar--shadow':border,'uni-navbar--border':border}" :style="{'background-color':backgroundColor}" class="uni-navbar__content">
 			<uni-status-bar v-if="statusBar" />
@@ -14,7 +13,7 @@
 				<view class="uni-navbar__header-container uni-navbar__content_view">
 					<view v-if="title.length" class="uni-navbar__header-container-inner uni-navbar__content_view">{{ title }}</view>
 					<!-- 标题插槽 -->
-					<slot />
+					<slot name="mod"/>
 				</view>
 				<view :class="title.length?'uni-navbar__header-btns-right':''" class="uni-navbar__header-btns uni-navbar__content_view" @tap="onClickRight">
 					<view v-if="rightIcon.length" class="uni-navbar__content_view">
@@ -120,9 +119,10 @@
 		display: flex;
 		flex-direction: row;
 		width: 100%;
-		height: 44px;
-		line-height: 44px;
-		font-size: 16px
+		height: 80px;
+		margin-top: 10px;
+		line-height: 40px;
+		font-size: 22px
 	}
 
 	.uni-navbar__header-btns {
@@ -169,11 +169,11 @@
 	}
 
 	.uni-navbar--shadow {
-		box-shadow: 0 1px 6px #ccc
+		
 	}
 
 	.uni-navbar--border:after {
-		position: absolute;
+		/* position: absolute;
 		z-index: 3;
 		bottom: 0;
 		left: 0;
@@ -182,6 +182,6 @@
 		content: '';
 		-webkit-transform: scaleY(.5);
 		transform: scaleY(.5);
-		background-color: #e5e5e5
+		background-color: #e5e5e5 */
 	}
 </style>
