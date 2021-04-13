@@ -76,6 +76,7 @@
             }
             
         }        
+<<<<<<< HEAD
         ,{
             "path" : "pages/login/login",
             "style":  {
@@ -101,6 +102,24 @@
             }
             
         }
+=======
+        ,{
+            "path" : "pages/search/search",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/login/login",
+            "style":  {
+            	"navigationStyle":"custom"
+            	}
+            
+        }
+>>>>>>> 5f0e92e4002d39ab0b49c448bce5fb28ab8a11fd
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
