@@ -68,6 +68,47 @@
             }
             
         }        
+        ,{
+            "path" : "pages/login/login",
+            "style":  {
+            	"navigationStyle":"custom"
+            	}
+            
+        }
+        ,{
+            "path" : "pages/zoom/zoom",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/zoom/zoom",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/search/search",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/login/login",
+            "style":  {
+            	"navigationStyle":"custom"
+            	}
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

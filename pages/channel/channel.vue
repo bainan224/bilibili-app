@@ -18,7 +18,7 @@
 	export default {
 		data() {
 			return {
-			list: [],
+			// list: [],
 			}
 		},
 		onLoad() {
