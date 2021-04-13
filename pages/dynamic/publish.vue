@@ -79,11 +79,13 @@ export default {
 		.dingwei {
 			width: 65rpx;
 			height: 30px;
-			float: left;
+			flex: left;
+			align-items: flex-start;
 			/* margin-top: 10px; */
 		}
 		button {
 			margin-top: 10px;
+			
 		}
 		
 		 .footer {
