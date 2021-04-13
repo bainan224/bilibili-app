@@ -11,6 +11,14 @@
 				
 			}
 		},
+		onLoad() {
+			uni.request({
+				url: "https://api.bilibili.com/x/web-interface/popular?ps=20&pn=1",  
+				success: (res) => {
+							console.log(res);
+							}
+		})
+		},
 		methods: {
 			
 		}
