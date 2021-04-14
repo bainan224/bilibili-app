@@ -6,7 +6,7 @@
 		</view>
 		<text class='iconfont icon-shipin '></text>
 		<!-- <text v-if="true" v-html="hhh">wwww</text> -->
-		<button type="primary" @click="List">获取数据</button>
+		<!-- <button type="primary" @click="List">获取数据</button> -->
 		
 		<view v-for="(item,index) in list" :key="index">
 			<view>{{item}}</view>

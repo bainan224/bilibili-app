@@ -59,9 +59,9 @@
 					"titleNView": {
 						"buttons":[{
 						"float":"right",
-							"text": "\ue6c3   ",
+							"text": "\ue681  ",
 							"fontSrc": "/static/iconfont.ttf",
-							"fontSize":"25px"
+							"fontSize":"35px"
 						}]
 					}
 				}
