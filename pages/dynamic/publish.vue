@@ -1,19 +1,21 @@
 <template>
-	<view class="container0" >	 
+	<view class="container0" >	
+	 <!-- 文本框 分享的文字内容 -->
 		<div class="input" coordinate="true" >
 			<textarea  placeholder="分享我的哔哩哔哩动态" class="input-text" />
 		</div >
+			<!-- 添加图片 -->
 		<view class="image-list">
-			    
 			    	<image src="../../static/publish/ic_add_gray.png"  id="pic-add" @click="upload"></image>
-			    
 		</view>
+		<!-- 获取定位 -->
 		<div class="address" @click="getAdress">
 					<image src="../../static/publish/1.png" style="background-color: #FFFFFF;" class="dingwei"></image>
 					<div type="default" class="text" >
 						你在哪里？
 					</div>
 		</div>
+		<!-- 底部图标 -->
 		<div class="footer">
 				<image src="../../static/publish/ic_publish_pic.png" v-show="show "  @click="changeImg" class="mt-2  ml-2 "></image>
 				<image src="../../static/publish/img_painting_publish_emoji.png"  v-show="show"  @click="changeImg"  class="mt-2  ml-3"></image>
