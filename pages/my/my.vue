@@ -34,6 +34,8 @@
 					<text class="font text-muted">{{ item.name }}</text>
 				</view>
 			</view>
+			
+
 		</template>
 	</view>
 </template>

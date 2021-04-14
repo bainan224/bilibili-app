@@ -6,6 +6,14 @@
   url('https://at.alicdn.com/t/font_2474603_urshfpwtdk.woff') format('woff'),
   url('https://at.alicdn.com/t/font_2474603_urshfpwtdk.ttf') format('truetype'),
   url('https://at.alicdn.com/t/font_2474603_urshfpwtdk.svg#iconfont') format('svg');
+
+  src: url('https://at.alicdn.com/t/font_2474603_wm6x09iz2uf.eot');
+  src: url('https://at.alicdn.com/t/font_2474603_wm6x09iz2uf.eot?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_2474603_wm6x09iz2uf.woff2') format('woff2'),
+  url('https://at.alicdn.com/t/font_2474603_wm6x09iz2uf.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_2474603_wm6x09iz2uf.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_2474603_wm6x09iz2uf.svg#iconfont') format('svg');
+
 }
 
 .iconfont {
@@ -15,6 +23,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 
 .icon-delete:before {
   content: "\e60a";
@@ -111,6 +120,7 @@
 .icon-pinglun:before {
   content: "\e603";
 }
+
 
 .icon-xinfeng:before {
   content: "\e857";
@@ -246,5 +256,7 @@
 
 .icon-paizhao:before {
   content: "\e620";
+
 }
+
 
