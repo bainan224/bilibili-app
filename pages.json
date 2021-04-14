@@ -80,7 +80,7 @@
             "path" : "pages/search/search",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
+                "navigationBarTitleText": "搜索",
                 "enablePullDownRefresh": false
             }
             

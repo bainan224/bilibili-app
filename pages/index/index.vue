@@ -6,7 +6,7 @@
 					src="http://first-bucket20201002.oss-cn-hangzhou.aliyuncs.com/img/img/avatar/me.jpg">
 			</view>
 			<view slot="mod">
-				<view class="input" >
+				<view class="input" @click="gotoSearch">
 					<text class="iconfont icon-wddl" style="color: #d1d1d1;" />
 				</view>
 			</view>
@@ -15,53 +15,47 @@
 				<i class="iconfont icon-xinfeng right-icon" style="margin-left:10px;font-weight:bold;"></i>
 			</view>
 		</uni-nav-bar>
-		<view style="display: flex; flex-direction: row; width: 100%;">
-			<view style="width: 20%;">
-				<view class="btn" @click="changeCard('broadcast')">
-					<text class="title">直播</text>
-				</view>
+		<view >
+				<tabControl :current="current" :values="items" bgc="#fff" :fixed="true" :scrollFlag="true" :isEqually="false" @clickItem="onClickItem"></tabControl>
+				<!-- 使用 swiper 配合 滑动切换 -->
+				<swiper class="swiper" style="height: 100%;" @change="scollSwiper" :current="current">
+					<swiper-item v-for="(item, index) in items" :key="index">
+						<!-- 使用 scroll-view 来滚动内容区域 -->
+						<scroll-view scroll-y="true" style="height: 100%;">{{ item }}</scroll-view>
+					</swiper-item>
+				</swiper>
+		</view>
+		<view class="show">
+			<view v-show="currentIndex === 0" >
+				<h2 >直播</h2>
 			</view>
-			<view style="width: 20%;">
-				<view class="btn" @click="changeCard('recommend')">
-					<text class="title">推荐</text>
-				</view>
+			
+			<view v-show="currentIndex === 1" >
+				<h2>推荐</h2>
 			</view>
-			<view style="width: 20%;">
-				<view class="btn" @click="changeCard('hot')">
-					<text class="title">热门</text>
-				</view>
+			
+			<view v-show="currentIndex === 2">
+				<h2>热门</h2>
 			</view>
-			<view style="width: 20%;">
-				<view class="btn" @click="changeCard('watching')">
-					<text class="title">追番</text>
-				</view>
+			
+			<view v-show="currentIndex === 3">
+				<h2>追番</h2>
 			</view>
-			<view style="width: 20%;">
-				<view class="btn" @click="changeCard('video')">
-					<text class="title">影视</text>
-				</view>
+			
+			<view v-show="currentIndex === 4">
+				<h2>影视</h2>
 			</view>
+			
+			<view v-show="currentIndex === 5">
+				<h2>抗击肺炎</h2>
+			</view>
+			
+			<view v-show="currentIndex === 6">
+				<h2>建党百年</h2>
+			</view>
+			
 		</view>
-
-		<view v-show="currentIndex === 'broadcast'" @click="gotoSearch">
-			<h2 >直播</h2>
-		</view>
-
-		<view v-show="currentIndex === 'recommend'">
-			<h2>推荐</h2>
-		</view>
-
-		<view v-show="currentIndex === 'hot'">
-			<h2>热门</h2>
-		</view>
-
-		<view v-show="currentIndex === 'watching'">
-			<h2>追番</h2>
-		</view>
-
-		<view v-show="currentIndex === 'video'">
-			<h2>影视</h2>
-		</view>
+		
 
 
 	</view>
@@ -69,17 +63,18 @@
 
 <script>
 	import uniNavBar from '../../components/uni-ui/uni-nav-bar/uni-nav-bar.vue'
-
+    import tabControl from '@/components/tabControl/tabControl.vue';
 
 	export default {
 		components: {
 			uniNavBar,
-
+            tabControl
 		},
 		data() {
 			return {
-				currentIndex: 'recommend',
-
+						items: ['直播', '推荐', '热门', '追番', '影视','抗击肺炎','建党百年'],
+						current: 0,
+                        currentIndex: 1
 			}
 		},
 		onLoad() {
@@ -91,11 +86,14 @@
 			});
 		},
 		methods: {
-			changeCard(value) {
-				console.log(value);
-				this.currentIndex = value;
-
-			},
+			onClickItem(val) {
+						this.current = val.currentIndex;
+					},
+					scollSwiper(e) {
+						this.current = e.target.current;
+						console.log(this.current)
+						this.currentIndex = e.target.current;
+					},
 			gotoSearch() {
 				console.log("进入搜索页面")
 				uni.navigateTo({
@@ -134,12 +132,11 @@
 	}
 
 	.input {
+		float: left;
+		height: 30px;
 		margin-top: 10px;
-		padding-top: 1px;
-		padding-bottom: 13px;
 		width: 200px;
-		border-radius: 5%;
-		height: 25px;
+		border-radius:30px;
 		background-color: #f6f6f6;
 	}
 
@@ -156,4 +153,9 @@
 		transform: scaleY(.5);
 		background-color: #e5e5e5
 	}
+	.show{
+		margin-top: 50px;
+	}
+	
+	
 </style>
