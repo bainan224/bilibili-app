@@ -101,11 +101,10 @@
             
         }
 		,{
-		    "path" : "pages/my/setting",
-		    "style":  {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-		    	}
+		    "path" : "pages/my/setting/setting",
+		   "style":  {
+		   	"navigationStyle":"custom"
+		   	}
 		    
 		}
     ],
