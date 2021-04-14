@@ -110,7 +110,7 @@
 			},
 			gotoSetting() {
 				uni.navigateTo({
-					url:'../my/setting'
+					url:'../my/setting/setting'
 				})
 			}
 
