@@ -1,7 +1,7 @@
 <template>
 	<view>
 		<uni-nav-bar>
-			<view slot="left">
+			<view slot="left" @click="gotoSetting">
 				<image class="avatar" 
 					src="http://first-bucket20201002.oss-cn-hangzhou.aliyuncs.com/img/img/avatar/me.jpg">
 			</view>
@@ -108,6 +108,11 @@
 				});
 
 			},
+			gotoSetting() {
+				uni.navigateTo({
+					url:'../my/setting'
+				})
+			}
 
 		},
 	};
