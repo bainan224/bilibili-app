@@ -20,7 +20,15 @@
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
+				"app-plus": {
+					"titleNView": {
+						"buttons":[{
+							"float":"right",
+						     "text":"\ue64d",
+							"fontSrc": "/static/iconfont.ttf"
+						}]
+					}
+				}
             }
             
         }
@@ -42,22 +50,6 @@
             }
             
         }
-		,{  
-		    "path": "pages/log/log",  
-			"style": {  
-				"navigationBarTitleText": "hello",  
-				"app-plus": {  
-					"titleNView": {  
-						"buttons": [{  
-							"float":"right",
-							"text": "\ue123",  
-							"fontSrc": "../static/image/publish/publish.ttf",  
-							"fontSize": "22px"  
-						}]  
-					}  
-				}  
-			}	  
-		}
         ,{
             "path" : "pages/dynamic/publish",
             "style" :                                                                                    
@@ -77,6 +69,22 @@
             
         }        
         ,{
+            "path" : "pages/login/login",
+            "style":  {
+            	"navigationStyle":"custom"
+            	}
+            
+        }
+        ,{
+            "path" : "pages/zoom/zoom",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
             "path" : "pages/search/search",
             "style" :                                                                                    
             {
@@ -92,6 +100,14 @@
             	}
             
         }
+		,{
+		    "path" : "pages/my/setting",
+		    "style":  {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+		    	}
+		    
+		}
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
