@@ -34,12 +34,9 @@
         }
         ,{
             "path" : "pages/vip/vip",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
+			"style":  {
+				"navigationStyle":"custom"
+			} 
         }
         ,{
             "path" : "pages/my/my",
