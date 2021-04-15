@@ -96,14 +96,14 @@
         ,{
             "path" : "pages/login/login",
             "style":  {
-            	"navigationStyle":"custom"
+
             	}
             
         }
 		,{
 		    "path" : "pages/my/setting/setting",
 		   "style":  {
-		   	"navigationStyle":"custom"
+				"navigationStyle":"custom"
 			// "navigationBarTitleText": "设置",
 			// "enablePullDownRefresh": false
 		   	}
