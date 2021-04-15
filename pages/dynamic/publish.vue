@@ -1,38 +1,68 @@
 <template>
-	<view class="container">	 
-		<view class="input" >
-			<textarea  placeholder="分享我的哔哩哔哩动态" class="input-text"/>
-		</view>
+	<view class="container0" >	
+	 <!-- 文本框 分享的文字内容 -->
+		<div class="input" coordinate="true" >
+			<textarea  placeholder="分享我的哔哩哔哩动态" class="input-text" />
+		</div >
+			<!-- 添加图片 -->
 		<view class="image-list">
-			    <view class="add">
-			    	<image src="../../static/image/publish/pic-add.png" id="pic-add"></image>
-			    </view>
+			    	<image src="../../static/publish/ic_add_gray.png"  id="pic-add" @click="upload"></image>
 		</view>
-		<view class="address">
-				<image src="../../static/publish/coordinate.png" class="dingwei"></image>
-			<button type="default" style="width: 100px; height: 30px; font-size: 20rpx; ">
-				你在哪里？</button>
-		</view>
-		<div class="footer">
-			<image src="../../static/publish/pic.png" ></image>
-			<image src="../../static/publish/bili.png" ></image>
-			<image src="../../static/publish/vote.png" ></image>
-			<image src="../../static/publish/add.png" ></image>
+		<!-- 获取定位 -->
+		<div class="address" @click="getAdress">
+					<image src="../../static/publish/1.png" style="background-color: #FFFFFF;" class="dingwei"></image>
+					<div type="default" class="text" >
+						你在哪里？
+					</div>
 		</div>
-		</view>
+		<!-- 底部图标 -->
+		<div class="footer">
+				<image src="../../static/publish/ic_publish_pic.png" v-show="show "  @click="changeImg" class="mt-2  ml-2 "></image>
+				<image src="../../static/publish/img_painting_publish_emoji.png"  v-show="show"  @click="changeImg"  class="mt-2  ml-3"></image>
+				<image src="../../static/publish/ic_publish_at.png"  v-show="show"  @click="changeImg" class="mt-2  ml-3"></image>
+				<image src="../../static/publish/ic_publish_topic.png"  v-show="show"  @click="changeImg" class="mt-2 ml-3"></image>
+				<image src="../../static/publish/ic_publish_vote.png"  v-show="show"  @click="changeImg" class="mt-2  ml-3"></image>
+				<image src="../../static/publish/ic_group_manager_add.png"  v-show="show"  @click="changeImg" class="mt-2 ml-3"></image>
+				<image src="../../static/publish/ic_publish_keyboard.png"  v-show="!show"  @click="changeImg" class="mt-2 "></image>
+		  </div>
+		
 	</view>
+
 </template>
 
 <script> 
 export default {  
     data() {  
-        return {}  
-    } 
+        return {
+			images:[],
+			
+			show: true,
+			
+		}  
+    },
+	 methods:{
+		 upload:function() {
+			 
+		 },
+		 changeImg:function() {
+			 this.show =  !this.show 
+		 },
+		 getAdress:function(){ 
+			uni.chooseLocation({
+			    success: function (res) {
+			        console.log('位置名称：' + res.name);
+			        console.log('详细地址：' + res.address);
+			        console.log('纬度：' + res.latitude);
+			        console.log('经度：' + res.longitude);
+			    }
+			});
+		 }
+	 }
 }  
 </script>
 
-<style>
-	.container {
+<style scoped>
+	.container0 {
 		width: 100%;
 	}
 	.input {
@@ -47,60 +77,70 @@ export default {
 	}
 	
 	.bottom {
-		/* position: absolute;
-		bottom: 10%; */
 		width: 100%;
-		/* height: 40rpx; */
+	
 		background-color: red;
 	}
 	.image-list {
 		margin: 20px;
 	}
-	.add {
-		width: 100px;
-		height: 100px;
-		/* padding: 10px 0 0 10px; */
-		border: #000 solid 1rpx;
-		border-style: dashed;
-	}
 		#pic-add {
-			width: 80px;
-			height: 80px;
-			margin: 11px;
+			width: 100px;
+			height: 100px;
+			margin-top: 11px;
 		}
-		.address {
-			width: 150px;
-			height: 30px;
-			/* background-color: #555555; */
-			bottom: 60px;
-		
 
-		}
 		.dingwei {
+			position: absolute;
 			width: 65rpx;
 			height: 30px;
-			float: left;
-			/* margin-top: 10px; */
+			left: 20px;
+			background-color: #FFFDEF;
+		
 		}
-		button {
-			margin-top: 10px;
+		.text {
+			/* position: absolute; */
+			width: 70px;
+			height: 22px;
+			margin-left: 52px;
+			margin-top: 2px;
+			border-radius: ;
+			/* margin-left: -200px; */
+			
 		}
 		
-		 .footer {
-		        width: 100%;
-		        height: 50px;
-		        background: #dce1eb;
+		
+		
+		 .address {
+		        width: 150px;
+		        height: 40px;
+		        background: #FFF;
 		        line-height: 40px;
 		        text-align: center;
 		        position: fixed;
-		        bottom: 0;
+				bottom: 50px;
+				/* border: #000000 solid 2px; */
+				
 		    }
-			.footer image {
-					width: 60rpx;
-					height: 45rpx;
+			 .footer {
+				width: 100%;
+				height: 48px;
+				background: #dce1eb;
+				line-height: 40px;
+				text-align: center;
+				position: fixed;
+				bottom: 0;
+			/* 	margin-top: 0; */
+			}
+			 .footer image {
+					width: 65rpx;
+					height: 55rpx;
 					float: left;
-					margin: 25rpx;
+					/* margin-top: 25rpx; */
+					/* margin-left: 20px; */
+					background-color: #DCE1EB;
 					
-				}
+			}
+			
 
 </style>
