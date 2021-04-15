@@ -75,8 +75,8 @@
 				}
             }
             
-        }        
-<<<<<<< HEAD
+        }
+
         ,{
             "path" : "pages/login/login",
             "style":  {
@@ -93,16 +93,7 @@
             }
             
         }
-        ,{
-            "path" : "pages/zoom/zoom",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-=======
+
         ,{
             "path" : "pages/search/search",
             "style" :                                                                                    
@@ -117,9 +108,16 @@
             "style":  {
             	"navigationStyle":"custom"
             	}
+}
+        ,{
+            "path" : "pages/myrec/myrec",
+            "style" :                                                                                    
+            {
+               "navigationStyle":"custom"
+              
+            }
             
         }
->>>>>>> 5f0e92e4002d39ab0b49c448bce5fb28ab8a11fd
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
