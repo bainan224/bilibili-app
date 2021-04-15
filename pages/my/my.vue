@@ -1,9 +1,9 @@
 <template>
 	<view>
 		<!-- 未登录 -->
-		<template v-if="!loginStatus">
+		<template v-if="loginStatus">
 			<view class="flex align-center p-2" hover-class="bg-light">
-				<image src="/static/default.jpg" @click="gotoZoom" style="width: 100rpx;height: 100rpx;" class="rounded-circle"></image>
+				<image src="/static/default.jpg"  style="width: 100rpx;height: 100rpx;" class="rounded-circle"></image>
 				<view class="flex flex-column flex-1 px-2">
 					<text class="font text-muted">登录，体验更多功能</text>
 				</view>
@@ -37,12 +37,8 @@
 			
 
 		</template>
+		<template>
 			<view style="margin-left:7%;">
-				<!-- <button class="margin: auto 7%; icon-wenjianxiazai"></button> -->
-				<!-- <view
-				class="flex flex-column flex flex-column align-center justify-center">
-				<text class="font text-muted">{{ item.name }}</text>
-				</view> -->
 				
 				<!-- 基本功能1 -->
 				<view style="display: flex; flex-direction: row;justify-content: space-between; margin-right: 8%;">
@@ -151,6 +147,7 @@
 					</br>
 		
 			</view>
+			</template>
 	</view>
 </template>
 
@@ -195,14 +192,10 @@
 					url: '../login/login'
 				});
 			},
-			gotoZoom() {
-				uni.navigateTo({
-					url: '../zoom/zoom'
-				});
-			},
+			
 			userSet() {
 				uni.navigateTo({
-					url: '../user-set/user-set'
+					url: '../zoom/zoom'
 				});
 			}
 		}
