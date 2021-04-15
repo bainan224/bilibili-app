@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<uni-nav-bar class="nav" @click="back">
+		<uni-nav-bar class="top" @click="back">
 			<ul>
 				<view slot="left" >
 					<i class="iconfont icon-right-angle"></i>
@@ -8,6 +8,7 @@
 				</view>
 			</ul>
 		</uni-nav-bar>
+		
 
 		<view class="container">
 			<ul>
@@ -75,7 +76,7 @@
 				</view>
 
 				<view class="nav-item">
-					<navigator class="content" hover-class="none" url="">
+					<navigator class="content" hover-class="none" url="../download/download">
 						<text class="text">下载管理</text>
 						<i class="iconfont icon-youjiantou"></i>
 					</navigator>
@@ -223,9 +224,9 @@ export default {
 
 .subtext {
 	color: #959595;
-	margin-left: -650rpx;
+	margin-left: -690rpx;
 	margin-top: 30rpx;
-	font-size: 13rpx;
+	font-size: 20rpx;
 }
 .right {
 	font-size: 32rpx;
@@ -266,5 +267,17 @@ ul {
 	min-height: 70rpx;
 	background-color: #fff;
 	border-bottom: 0rpx solid #ededed;
+}
+
+.top{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-sizing: border-box;
+	padding: 0 30rpx;
+	min-height: 100rpx;
+	background-color: #fff;
+	border-bottom: 20rpx solid #ededed;
+	margin-top: 80rpx;
 }
 </style>
