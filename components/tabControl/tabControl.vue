@@ -174,6 +174,7 @@
 		margin-top: 80px;
 		position: fixed;
 		z-index: 2;
+		
 	}
 	.tabList{
 		padding-top: 24rpx;
@@ -186,13 +187,13 @@
 			display: inline-block;
 			position: relative;
 			text{
-				// font-size: 30rpx;
+			    font-size: 36rpx;
 				line-height: 44rpx;
 				color: #666;
 				transition: all 0.3s ease 0s;
 			}
 			.activeLine{
-				// width: 48rpx;
+				width: 48rpx;
 				height: 8rpx;
 				border-radius: 4rpx;
 				background-color: #f496b6;
@@ -213,7 +214,7 @@
 			text{
 				color: #f496b6;
 				font-weight:600;
-				// font-size: 32rpx;
+				font-size: 40rpx;
 			}
 			.activeLine{
 				opacity: 1;

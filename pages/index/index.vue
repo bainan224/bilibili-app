@@ -11,23 +11,21 @@
 				</view>
 			</view>
 			<view slot="right">
-				<i class="iconfont icon-youxi right-icon" style="margin-left:-40px;"></i>
+				<i class="iconfont icon-youxi right-icon" style="margin-left:-100rpx;"></i>
 				<i class="iconfont icon-xinfeng right-icon" style="margin-left:10px;font-weight:bold;"></i>
 			</view>
 		</uni-nav-bar>
-		<view >
-				<tabControl :current="current" :values="items" bgc="#fff" :fixed="true" :scrollFlag="true" :isEqually="false" @clickItem="onClickItem"></tabControl>
-				<!-- 使用 swiper 配合 滑动切换 -->
+		<view class="tab-container">
+				<tabControl :current="current" :values="tabs" bgc="#fff" :fixed="true" :scrollFlag="true" :isEqually="false" @clickItem="onClickItem"></tabControl>
 				<swiper class="swiper" style="height: 100%;" @change="scollSwiper" :current="current">
-					<swiper-item v-for="(item, index) in items" :key="index">
-						<!-- 使用 scroll-view 来滚动内容区域 -->
-						<scroll-view scroll-y="true" style="height: 100%;">{{ item }}</scroll-view>
+					<swiper-item v-for="(item, index) in tabs" :key="index">
+						<scroll-view scroll-y="true" style="height: 100%;">{{ item }}</scroll-view> 
 					</swiper-item>
 				</swiper>
 		</view>
 		<view class="show">
 			<view v-show="currentIndex === 0" >
-				<h2 >直播</h2>
+				<h2>直播</h2>
 			</view>
 			
 			<view v-show="currentIndex === 1" >
@@ -35,7 +33,36 @@
 			</view>
 			
 			<view v-show="currentIndex === 2">
-				<h2>热门</h2>
+				<view class="top">
+					<view class="flex flex-column " style="width: 33%;align-items: center;">
+						<image class="img" src="../../static/image/index/icon_rank.png"/>
+						<text>排行榜</text>
+					</view>
+					<view class="flex flex-column" style="width: 34%;align-items: center;">
+						<image class="img" src="../../static/image/index/icon_weekly.png"/>
+						<text>每周必看</text>
+					</view>
+					<view class="flex flex-column" style="width: 33%;margin-right: 0;align-items: center;">
+						<image class="img" src="../../static/image/index/icon_history.png">
+						<text>入站必刷</text>
+					</view>
+				</view>
+				<view>
+					<view
+						class="card" 
+						v-for="(item,index) in items"
+						:key="index">
+						<view style="width: 50%;height: 100%; align-items: center;margin:5rpx;">
+						<image :src=item.pic class="card-img">
+						</view>	
+					    <view class="flex flex-column card-text" style="width: 50%;">
+							<text class="font text-muted">{{ item.title}}</text>
+							<text class="">{{item.owner.name}}</text>
+							<text >{{ item.stat.view /10000}}万观看 04-12</text>
+						</view>
+									  
+					</view>
+				</view>
 			</view>
 			
 			<view v-show="currentIndex === 3">
@@ -72,15 +99,20 @@
 		},
 		data() {
 			return {
-						items: ['直播', '推荐', '热门', '追番', '影视','抗击肺炎','建党百年'],
-						current: 0,
-                        currentIndex: 1
+				
+						tabs: ['直播', '推荐', '热门', '追番', '影视','抗击肺炎','建党百年'],
+						current: 1,
+                        currentIndex: 1,
+						
 			}
 		},
 		onLoad() {
 			uni.request({
 				url: 'https://api.bilibili.com/x/web-interface/popular?ps=20&pn=1',
 				success: (res) => {
+					this.items = res.data.data.list
+					
+					console.log(this.items)
 					console.log(res);
 				}
 			});
@@ -140,7 +172,7 @@
 		float: left;
 		height: 30px;
 		margin-top: 10px;
-		width: 200px;
+		width: 400rpx;
 		border-radius:30px;
 		background-color: #f6f6f6;
 	}
@@ -159,7 +191,45 @@
 		background-color: #e5e5e5
 	}
 	.show{
-		margin-top: 50px;
+		margin-top: 3px;
+	}
+	.tab-container{
+		width: 100%;
+		margin-top: 78rpx;
+		border-bottom: 1px solid #d1d1d1;
+	}
+	.top{
+		
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		align-items: center;
+		margin-top: 20rpx;
+		
+	}
+	.img{
+		background-color: #FFFFFF;
+		width: 100rpx;
+		height:100rpx;
+	}
+	.card{
+		margin-top: 30rpx;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		width: 100%;
+		height: 240rpx;
+		border-bottom: 1px solid #d1d1d1;
+	}
+	.card-img{
+		
+		width: 95%;
+		height: 90%;
+		border-radius: 5px;
+	}
+	.card-text{
+		margin: 20rpx;
+		width: 95%;
 	}
 	
 	
