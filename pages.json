@@ -17,19 +17,9 @@
         }
         ,{
             "path" : "pages/dynamic/dynamic",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-				"app-plus": {
-					"titleNView": {
-						"buttons":[{
-							"float":"right",
-						     "text":"\ue64d",
-							"fontSrc": "/static/iconfont.ttf"
-						}]
-					}
-				}
-            }
+			"style": {
+				"navigationStyle":"custom"
+			}
             
         }
         ,{
@@ -54,17 +44,7 @@
             "path" : "pages/dynamic/publish",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
-				"app-plus": {
-					"titleNView": {
-						"buttons":[{
-						"float":"right",
-							"text": "\ue681  ",
-							"fontSrc": "/static/iconfont.ttf",
-							"fontSize":"35px"
-						}]
-					}
-				}
+              "navigationStyle":"custom"
             }
             
         }        
