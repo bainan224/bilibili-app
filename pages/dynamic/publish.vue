@@ -19,7 +19,7 @@
 			<!-- 显示图片，可以预览删除 -->
 				<view class="image-wrap">
 			<image v-for="image in images " :src="image" mode="aspectFill" style="width: 100px; height: 100px; margin: 10px;" @click="onPreviewImage" :data-imgsrc="image"></image>
-					<i class="iconfont icon-delete delete" @click="onDelImage"  :data-index="image"></i>
+					<!-- <i class="iconfont icon-delete delete" @click="onDelImage"  :data-index="image"></i> -->
 				</view>
 			<!-- </view> -->
 			<view class="image-wrap selectphoto" :hidden="!selectphoto" @click="onChooseImage">
