@@ -20,44 +20,62 @@
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
+				"app-plus": {
+					"titleNView": {
+						"buttons":[{
+							"float":"right",
+						     "text":"\ue64d",
+							"fontSrc": "/static/iconfont.ttf"
+						}]
+					}
+				}
             }
             
         }
         ,{
             "path" : "pages/vip/vip",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
+			"style":  {
+				"navigationStyle":"custom"
+			} 
         }
         ,{
             "path" : "pages/my/my",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
+                // "enablePullDownRefresh": false,
+				"app-plus":{
+					"titleNView": {
+						"buttons":[ {
+							//原生导航栏按钮配置
+								"float":"right",
+								"text":"\ue61a",
+								"fontSrc":"/stasic/iconfont.ttf",
+								"fontSize":"22px",
+								"color":"gray"
+						},
+						 {
+						 		"float":"right",
+						 		"text":"\ue647",
+						 		"fontSrc":"/stasic/iconfont.ttf",
+						 		"fontSize":"22px",
+						 		"color":"gray"
+						 },
+						 { 
+						 		"float":"right",
+						 		"text":"\ue621",
+						 		"fontSrc":"/stasic/iconfont.ttf",
+						 		"fontSize":"22px",
+						 		"color":"gray"
+						 }
+							
+					]
+						
+					}
+				}
             }
             
         }
-		,{  
-		    "path": "pages/log/log",  
-			"style": {  
-				"navigationBarTitleText": "hello",  
-				"app-plus": {  
-					"titleNView": {  
-						"buttons": [{  
-							"float":"right",
-							"text": "\ue123",  
-							"fontSrc": "../static/image/publish/publish.ttf",  
-							"fontSize": "22px"  
-						}]  
-					}  
-				}  
-			}	  
-		}
         ,{
             "path" : "pages/dynamic/publish",
             "style" :                                                                                    
@@ -67,15 +85,19 @@
 					"titleNView": {
 						"buttons":[{
 						"float":"right",
-							"text": "\ue6c3   ",
+							"text": "\ue681  ",
 							"fontSrc": "/static/iconfont.ttf",
-							"fontSize":"25px"
+							"fontSize":"35px"
 						}]
 					}
 				}
             }
             
+
         }
+
+               
+
 
         ,{
             "path" : "pages/login/login",
@@ -95,10 +117,37 @@
         }
 
         ,{
-            "path" : "pages/search/search",
+            "path" : "pages/zoom/zoom",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+
+
+        ,{
+            "path" : "pages/login/login",
+            "style":  {
+            	"navigationStyle":"custom"
+            	}
+            
+        }
+        ,{
+            "path" : "pages/zoom/zoom",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/search/search",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "搜索",
                 "enablePullDownRefresh": false
             }
             
@@ -108,6 +157,7 @@
             "style":  {
             	"navigationStyle":"custom"
             	}
+
 }
         ,{
             "path" : "pages/myrec/myrec",
@@ -118,6 +168,19 @@
             }
             
         }
+
+            
+        
+
+		,{
+		    "path" : "pages/my/setting/setting",
+		   "style":  {
+		   	"navigationStyle":"custom"
+		   	}
+		    
+		}
+
+
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
