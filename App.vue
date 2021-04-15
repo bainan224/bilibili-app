@@ -33,6 +33,6 @@ page {
 	display: none;
 }
 image {
-	background-color: #cccccc;
+	background-color: #fff;
 }
 </style>

@@ -59,15 +59,42 @@
 					"titleNView": {
 						"buttons":[{
 						"float":"right",
-							"text": "\ue6c3   ",
+							"text": "\ue681  ",
 							"fontSrc": "/static/iconfont.ttf",
-							"fontSize":"25px"
+							"fontSize":"35px"
 						}]
 					}
 				}
             }
             
         }        
+
+        ,{
+            "path" : "pages/login/login",
+            "style":  {
+            	"navigationStyle":"custom"
+            	}
+            
+        }
+        ,{
+            "path" : "pages/zoom/zoom",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/zoom/zoom",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+
         ,{
             "path" : "pages/login/login",
             "style":  {
@@ -100,6 +127,7 @@
             	}
             
         }
+
 		,{
 		    "path" : "pages/my/setting/setting",
 		   "style":  {
@@ -107,6 +135,7 @@
 		   	}
 		    
 		}
+
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

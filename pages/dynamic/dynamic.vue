@@ -1,9 +1,9 @@
 <template>
 	<view>
 		<h2>动态页面</h2>
-		 <view class="left" bindtap="onPublish">
-		    <i class="iconfont icon-fabu"></i>
-		  </view>
+		 <!-- <view class="left" >
+		    <i class="iconfont icon-bianji" @click="onPublish"></i>
+		  </view> -->
 	</view>
 </template>
 
@@ -14,10 +14,14 @@
 				
 			}
 		},
+		onNavigationBarButtonTap:function(){
+		          uni.navigateTo({
+		          	url:"./publish"
+		          })   
+		 },
 		methods: {
-			onPublish () {
-				navigate("../dynamic/publish.vue")
-			}
+			
+			
 		}
 	}
 </script>
