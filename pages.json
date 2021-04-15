@@ -104,9 +104,29 @@
 		    "path" : "pages/my/setting/setting",
 		   "style":  {
 		   	"navigationStyle":"custom"
+			// "navigationBarTitleText": "设置",
+			// "enablePullDownRefresh": false
 		   	}
 		    
 		}
+        ,{
+            "path" : "pages/my/download/download",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/my/download/download",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

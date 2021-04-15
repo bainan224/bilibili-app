@@ -1,5 +1,13 @@
 <template>
 	<view>
+		
+		<view class="nav-item">
+			<navigator class="content" hover-class="none" url="./setting/setting">
+				<text class="text">设置</text>
+				<i class="iconfont icon-youjiantou"></i>
+			</navigator>
+		</view>
+		
 		<!-- 未登录 -->
 		<template v-if="!loginStatus">
 			<view class="flex align-center p-2" hover-class="bg-light">
