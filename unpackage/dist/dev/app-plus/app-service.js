@@ -7557,7 +7557,7 @@ eval("module.exports = \"/static/image/index/biligame_up.png\";//# sourceURL=[mo
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("throw new Error(\"Module build failed (from ./node_modules/url-loader/dist/cjs.js):\\nError: ENOENT: no such file or directory, open 'D:\\\\vue-study\\\\bilibili-app\\\\bilibili-app\\\\static\\\\image\\\\index\\\\biligame_video_play_count.png'\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIxNjEuanMiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///161\n");
+eval("module.exports = \"/static/image/index/biligame_video_play_count.png\";//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbbnVsbF0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBIiwiZmlsZSI6IjE2MS5qcyIsInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0gXCIvc3RhdGljL2ltYWdlL2luZGV4L2JpbGlnYW1lX3ZpZGVvX3BsYXlfY291bnQucG5nXCI7Il0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///161\n");
 
 /***/ })
 ],[[0,"app-config"]]]);
