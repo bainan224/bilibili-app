@@ -37,12 +37,8 @@
 			
 
 		</template>
+		<template>
 			<view style="margin-left:7%;">
-				<!-- <button class="margin: auto 7%; icon-wenjianxiazai"></button> -->
-				<!-- <view
-				class="flex flex-column flex flex-column align-center justify-center">
-				<text class="font text-muted">{{ item.name }}</text>
-				</view> -->
 				
 				<!-- 基本功能1 -->
 				<view style="display: flex; flex-direction: row;justify-content: space-between; margin-right: 8%;">
@@ -151,6 +147,7 @@
 					</br>
 		
 			</view>
+			</template>
 	</view>
 </template>
 
@@ -192,7 +189,7 @@
 		methods: {
 			login() {
 				uni.navigateTo({
-					url: '../login/login'
+					url: '../zoom/zoom'
 				});
 			},
 			userSet() {
