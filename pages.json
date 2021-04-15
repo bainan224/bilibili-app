@@ -66,11 +66,11 @@
 					}
 				}
             }
-            
-        }        
-        ,{
-            "path" : "pages/login/login",
-            "style":  {
+				  }
+		,{
+            "path":"pages/login/login",
+            "style":  
+			{
             	"navigationStyle":"custom"
             	}
             
