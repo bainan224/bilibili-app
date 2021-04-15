@@ -46,7 +46,36 @@
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
+                // "enablePullDownRefresh": false,
+				"app-plus":{
+					"titleNView": {
+						"buttons":[ {
+							//原生导航栏按钮配置
+								"float":"right",
+								"text":"\ue61a",
+								"fontSrc":"/stasic/iconfont.ttf",
+								"fontSize":"22px",
+								"color":"gray"
+						},
+						 {
+						 		"float":"right",
+						 		"text":"\ue647",
+						 		"fontSrc":"/stasic/iconfont.ttf",
+						 		"fontSize":"22px",
+						 		"color":"gray"
+						 },
+						 { 
+						 		"float":"right",
+						 		"text":"\ue621",
+						 		"fontSrc":"/stasic/iconfont.ttf",
+						 		"fontSize":"22px",
+						 		"color":"gray"
+						 }
+							
+					]
+						
+					}
+				}
             }
             
         }
