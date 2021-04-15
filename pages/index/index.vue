@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<uni-nav-bar>
+		<uni-nav-bar class="nav">
 			<view slot="left" @click="gotoSetting">
 				<image class="avatar"
 					src="http://first-bucket20201002.oss-cn-hangzhou.aliyuncs.com/img/img/avatar/me.jpg">
@@ -57,18 +57,19 @@
 						<view class="flex flex-column card-text" style="width: 50%;padding-left: 16rpx;">
 							<text class="font text-muted card-title">{{ item.title}}</text>
 							<view class="card-lable" v-if="item.rcmd_reason.content != null">
-							    <text class="card-lable-text">{{ item.rcmd_reason.content}}</text>
+								<text class="card-lable-text">{{ item.rcmd_reason.content}}</text>
 							</view>
 							<view class="flex flex-row align-center" style="margin-bottom: -10rpx;">
 								<image class=" card-text-img" src="../../static/image/index/biligame_up.png">
-								<text class="card-text">{{item.owner.name}}</text>
+									<text class="card-text">{{item.owner.name}}</text>
 							</view>
 							<view class="flex flex-row align-center" style="margin-bottom: -20rpx;">
-								<image class="card-text-img" src="../../static/image/index/biligame_video_play_count.png">
-								<text class="card-text" >
-								{{(item.stat.view /10000).toFixed(1)}}万观看 04-16
-								</text>
-							</view>	
+								<image class="card-text-img"
+									src="../../static/image/index/biligame_video_play_count.png">
+									<text class="card-text">
+										{{(item.stat.view /10000).toFixed(1)}}万观看 04-16
+									</text>
+							</view>
 						</view>
 
 					</view>
@@ -171,7 +172,7 @@
 				console.log("进入播放页")
 				console.log(e)
 				let url = e
-				plus.runtime.openURL(url,function(res){
+				plus.runtime.openURL(url, function(res) {
 					console.log(res);
 				})
 			}
@@ -180,6 +181,13 @@
 	};
 </script>
 <style>
+	.nav {
+		position: sticky;
+		top: 44px;
+		top: 0;
+		z-index: 3;
+	}
+
 	.avatar {
 		border-radius: 50%;
 		margin: 40rpx 20rpx 0rpx 20rpx;
@@ -269,7 +277,7 @@
 		color: #BBBBBB;
 		font-size: 26rpx;
 		width: 95%;
-		
+
 	}
 
 	.card-title {
@@ -283,17 +291,19 @@
 	}
 
 	.card-text-img {
-		
-			background-color: #FFFFFF;
-			width: 30rpx;
-			height: 30rpx;
-		}
-	.card-lable{
+
+		background-color: #FFFFFF;
+		width: 30rpx;
+		height: 30rpx;
+	}
+
+	.card-lable {
 		height: 30rpx;
 		margin-bottom: 8rpx;
-		
-	}	
-	.card-lable-text{
+
+	}
+
+	.card-lable-text {
 		font-size: 26rpx;
 		color: #FF502E;
 		margin-bottom: 20rpx;
