@@ -6,7 +6,10 @@
 			<i class="iconfont icon-right-angle " style="margin-left: 20px;" ></i>
 		</view>
 		<view slot="right" @click="gotoDynamic" >
-			<i class="iconfont icon-tubiao-06  " style="font-size: 35px; margin-left:-30px; " ></i>
+			<i class="iconfont icon-tubiao-06  " style="font-size: 35px; margin-left: -30px; " ></i>
+		</view>
+		<view class="">
+			<button type="default">发布</button>
 		</view>
 	</uni-nav-bar>
 	<view class="container0" >	
@@ -17,12 +20,16 @@
 		</div >
 		<view class="image-list">
 			<!-- 显示图片，可以预览删除 -->
-				<view class="image-wrap">
-			<image v-for="image in images " :src="image" mode="aspectFill" style="width: 100px; height: 100px; margin: 10px;" @click="onPreviewImage" :data-imgsrc="image"></image>
-					<!-- <i class="iconfont icon-delete delete" @click="onDelImage"  :data-index="image"></i> -->
+			<view class="image-wrap">
+				<image class="image" v-for="image in images " :src="image" mode="aspectFill" style="width: 100px; height: 100px; margin: 10px;" @click="onPreviewImage" :data-imgsrc="image"></image>
+				<view style="display: inline;"  >
+					<i   class="iconfont icon-delete " @click="onDelImage" ></i>
 				</view>
+				
+					<i></i>
+			</view>
 			<!-- </view> -->
-			<view class="image-wrap selectphoto" :hidden="!selectphoto" @click="onChooseImage">
+			<view class=" selectphoto" :hidden="!selectphoto" @click="onChooseImage">
 			    	<image src="../../static/publish/ic_add_gray.png"  id="pic-add" ></image>
 			</view>		
 		</view>
@@ -31,7 +38,11 @@
 					<image src="../../static/publish/1.png" style="opacity: 0.5;" class="dingwei"></image>
 					<div type="default" class="text" >
 						你在哪里？
+						{{this.address}}
 					</div>
+					<view class="">
+						
+					</view>
 		</div>
 		<!-- 底部图标 -->
 		<div class="footer" style=" :bottom: 'footerBottom px';">
@@ -64,7 +75,7 @@ export default {
     data() {  
         return {
 			//输入的文字数
-			wordsNum: 0,
+			wordsNum: '',
 			footerBottom: 10,
 			images:[],
 			urls:[],
@@ -109,20 +120,20 @@ export default {
 				current: current
 			 })
 		 },
-		 // onDelImage(event) {
-			//  console.log(event)
-			//  this.$data.images.splice(event.target.dataset.index)
-			//  this.setData({
-			// 	 images: this.$data.images
-			//  })
-			//    console.log(this.data.images.length)
-			//      // 等于5，就可以显示选择图片元素来
-			//      if (this.data.images.length === MAX_IMG_NUM - 1) {
-			//        this.setData({
-			//          selectPhoto: true,
-			//        })
-			//      }
-		 // },
+		 onDelImage(event) {
+			 console.log(event)
+			 this.$data.images.splice(event.target.dataset.index)
+			 this.setData({
+				 images: this.$data.images
+			 })
+			   console.log(this.data.images.length)
+			     // 等于5，就可以显示选择图片元素来
+			     if (this.data.images.length === MAX_IMG_NUM - 1) {
+			       this.setData({
+			         selectPhoto: true,
+			       })
+			     }
+		 },
 		
 		 
 		 upload:function() {
@@ -134,6 +145,7 @@ export default {
 		 getAdress:function(){ 
 			uni.chooseLocation({
 			    success: function (res) {
+					
 			        console.log('详细地址：' + res.address);
 					this.address = res.address
 					console.log(this.address)
@@ -168,30 +180,39 @@ export default {
 	
 		background-color: red;
 	}
+	#pic-add {
+		width: 100px;
+		height: 100px;
+		margin-top: 11px;
+	}
 	.image-list {
 		margin: 20px;
-	}
-		#pic-add {
-			width: 100px;
-			height: 100px;
-			margin-top: 11px;
-		}
-	.image-wrap {
 		position: relative;
 	}
-	.delete {
-		position: absolute;
-		top: 0;
+	.container0.image-list.image-wrap.image {
+		width:100% ;
+		height: 100%;
 	}
 
-		.dingwei {
-			position: absolute;
-			width: 65rpx;
-			height: 30px;
-			left: 20px;
-			background-color: #FFFDEF;
+	
+	  .container0.image-list.image-wrap .icon-detele {
+	    position: absolute;
+		width: 40rpx;
+		height: 40rpx;
+		line-height: 40rpx;
+		top:0;
+	    right: 0;
+	    
+	}
+
+	.dingwei {
+		position: absolute;
+		width: 65rpx;
+		height: 30px;
+		left: 20px;
+		background-color: #FFFDEF;
 		
-		}
+	}
 		.text {
 			/* position: absolute; */
 			width: 70px;
