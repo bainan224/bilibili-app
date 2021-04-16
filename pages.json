@@ -17,52 +17,36 @@
         }
         ,{
             "path" : "pages/dynamic/dynamic",
-			"style": {
-				"navigationStyle":"custom"
-			}
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+				"app-plus": {
+					"titleNView": {
+						"buttons":[{
+							"float":"right",
+						     "text":"\ue64d",
+							"fontSrc": "/static/iconfont.ttf"
+						}]
+					}
+				}
+            }
             
         }
         ,{
             "path" : "pages/vip/vip",
-			"style":  {
-				"navigationStyle":"custom"
-			} 
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
         }
         ,{
             "path" : "pages/my/my",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "",
-                // "enablePullDownRefresh": false,
-				"app-plus":{
-					"titleNView": {
-						"buttons":[ {
-							//原生导航栏按钮配置
-								"float":"right",
-								"text":"\ue61a",
-								"fontSrc":"/stasic/iconfont.ttf",
-								"fontSize":"22px",
-								"color":"gray"
-						},
-						 {
-						 		"float":"right",
-						 		"text":"\ue647",
-						 		"fontSrc":"/stasic/iconfont.ttf",
-						 		"fontSize":"22px",
-						 		"color":"gray"
-						 },
-						 { 
-						 		"float":"right",
-						 		"text":"\ue621",
-						 		"fontSrc":"/stasic/iconfont.ttf",
-						 		"fontSize":"22px",
-						 		"color":"gray"
-						 }
-							
-					]
-						
-					}
-				}
+                "enablePullDownRefresh": false
             }
             
         }
@@ -70,43 +54,23 @@
             "path" : "pages/dynamic/publish",
             "style" :                                                                                    
             {
-              "navigationStyle":"custom"
+                "navigationBarTitleText": "",
+				"app-plus": {
+					"titleNView": {
+						"buttons":[{
+						"float":"right",
+							"text": "\ue6c3   ",
+							"fontSrc": "/static/iconfont.ttf",
+							"fontSize":"25px"
+						}]
+					}
+				}
             }
-
 		}
-        ,{
-            "path" : "pages/login/login",
-            "style":  {
-            	"navigationStyle":"custom"
-            	}
-            
-        }
-        ,{
-            "path" : "pages/zoom/zoom",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-
-        ,{
-            "path" : "pages/zoom/zoom",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-
-
-        ,{
-            "path" : "pages/login/login",
+		,{
+			"path" : "pages/login/login",
             "style":  
 			{
-
             	"navigationStyle":"custom"
             	}
             
@@ -132,30 +96,37 @@
         ,{
             "path" : "pages/login/login",
             "style":  {
-            	"navigationStyle":"custom"
-            	}
 
-}
-        ,{
-            "path" : "pages/myrec/myrec",
-            "style" :                                                                                    
-            {
-               "navigationStyle":"custom"
-              
-            }
+            	}
             
         }
-
-            
-        
-
 		,{
 		    "path" : "pages/my/setting/setting",
 		   "style":  {
-		   	"navigationStyle":"custom"
+				"navigationStyle":"custom"
+			// "navigationBarTitleText": "设置",
+			// "enablePullDownRefresh": false
 		   	}
 		    
 		}
+        ,{
+            "path" : "pages/my/download/download",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/my/download/download",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
