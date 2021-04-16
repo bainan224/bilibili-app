@@ -1,35 +1,23 @@
 <template>
 	<view>
 		<!-- 导航栏 -->
-		<uni-nav-bar 
-			fixed="flase"
-			rightIcon="/static/card/06.png"
-			color="#333333"
-			colorPressed="#FD597C"
-			>
+		<uni-nav-bar fixed="flase">
 			<view slot="default" style="padding: 70rpx; background-color: white; ">
-				<text @click="shipin">视频</text></view>
+				<text @click="gotovideo">视频</text></view>
 			<view slot="default" style="padding: 70rpx; background-color: white; ">综合</view>
-			<view slot="right" >
-				<image src="../../static/card/06.png" 
-				style="background-color: white;
-				width: 30rpx; height: 30rpx;"
-				@click="onPublish($event)"></image>
+			<view slot="right">
+			<i class="iconfont icon-bianji" @click="toPublish"></i>
 			</view>
 		</uni-nav-bar>
-				
 		
-		<view class="search">
-			<mSearch :show="false" @search="search($event,1)"
+		<view class="search" @click="gotosearch">
+			<mSearch :show="false"
 			model="1"
 			button="index"
 			placeholder="查找精彩动态内容"
-
 			>
-				 
 			</mSearch>
 			    {{val1}}
-					
 		</view>
 		  
 		<!-- 话题 -->
@@ -128,8 +116,8 @@
 				</view>		
 			</uni-card>
 		</view>
-					
-	</view>
+		
+	</view>			
 </template>
 
 <script>
@@ -154,31 +142,29 @@
 					url:"../index/index"
 				})
 			},
-			shipin() {
-			uni.switchTab({
-				url:"../index/index"
+			gotovideo() {
+			uni.navigateTo({
+				url:"./video"
 				})	
-			},
-			onPublish() {
-				uni.switchTab({
-					url:"./publish"
-				})
 			},
 			getMore() {
 				uni.switchTab({
 					url:"../index/index"
 				})
 			},
-			search(e, val) {
-				console.log(e, val);
-				this['val'+val] = e;
+			gotosearch() {
+				uni.navigateTo({
+					url:"../search/search"
+				})
+			},
+			toPublish(){
+				uni.navigateTo({
+					url:"./publish"
+				})
 			}
 		},
-		
-		
 	}
 </script>
-
 
 <style lang="stylus">
 	.cardx

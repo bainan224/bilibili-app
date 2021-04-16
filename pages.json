@@ -14,108 +14,156 @@
                 "enablePullDownRefresh": false
             }
             
-        }
-        ,{
-            "path" : "pages/dynamic/dynamic",
-            "style" : {
-				// "navigationBarTitleText": "视频",
-				// "navigationBarTextStyle":"black",
-				"navigationStyle":"custom",
-				"enablePullDownRefresh": false
-					// "app-plus": {
-						// 导航栏配置
-						// "titleNView": {
-						// 顶部切换设置
-						// list:[{
-						// 	"text": "视频",
-						// 	"color": "#333333",
-						// 	"colorPressed": "#FD597C",
-						// "fontSrc": "/static/iconfont.ttf",
-						// 	"float": "center"
-						// }, {
-						// 	"text": "综合",
-						// 	"color": "#333333",
-						// 	"colorPressed": "#FD597C",
-						// "fontSrc": "/static/iconfont.ttf"
-						// }],
-						// "buttons": [{
-						// 	"float": "right",
-						// 	"fontSize": "20px",
-						// 	"fontSrc": "/static/iconfont.ttf",
-						// 	"text": "\ue64d"
-						// }]
-					// }
-				// }
+        },																		
+			{
+            "path":"pages/dynamic/dynamic",
+			"style": {
+				"navigationStyle":"custom"
 			}
-		}																				
-
+        }
+		,{
+		    "path" : "pages/dynamic/video",
+			"style":  {
+				"navigationStyle":"custom"
+			} 
+		}
         ,{
             "path" : "pages/vip/vip",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
+			"style":  {
+				"navigationStyle":"custom"
+			} 
         }
         ,{
             "path" : "pages/my/my",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
+                // "enablePullDownRefresh": false,
+				"app-plus":{
+					"titleNView": {
+						"buttons":[ {
+							//原生导航栏按钮配置
+								"float":"right",
+								"text":"\ue61a",
+								"fontSrc":"/stasic/iconfont.ttf",
+								"fontSize":"22px",
+								"color":"gray"
+						},
+						 {
+						 		"float":"right",
+						 		"text":"\ue647",
+						 		"fontSrc":"/stasic/iconfont.ttf",
+						 		"fontSize":"22px",
+						 		"color":"gray"
+						 },
+						 { 
+						 		"float":"right",
+						 		"text":"\ue621",
+						 		"fontSrc":"/stasic/iconfont.ttf",
+						 		"fontSize":"22px",
+						 		"color":"gray"
+						 }
+							
+					]
+						
+					}
+				}
             }
             
         }
-		,{  
-		    "path": "pages/log/log",  
-			"style": {  
-				"navigationBarTitleText": "hello",  
-				"app-plus": {  
-					"titleNView": {  
-						"buttons": [{  
-							"float":"right",
-							"text": "\ue123",  
-							"fontSrc": "../static/image/publish/publish.ttf",  
-							"fontSize": "22px"  
-						}]  
-					}  
-				}  
-			}	  
-		}
         ,{
             "path" : "pages/dynamic/publish",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
-				"app-plus": {
-					"titleNView": {
-						"buttons":[{
-						"float":"right",
-							"text": "\ue6c3   ",
-							"fontSrc": "/static/iconfont.ttf",
-							"fontSize":"25px"
-						}]
-					}
-				}
-            },
-			"path" : "pages/my/setting",
-			"style" :                                                                                    
-			{
-			    "navigationBarTitleText": "",
-				"app-plus": {
-					"titleNView": {
-						"buttons":[{
-						"float":"right",
-							"text": "\ue6c3   ",
-							"fontSrc": "/static/iconfont.ttf",
-							"fontSize":"25px"
-						}]
-					}
-				}
-			}
+              "navigationStyle":"custom"
+            }
             
-        }        
+
+        }
+
+               
+
+
+        ,{
+            "path" : "pages/login/login",
+            "style":  {
+            	"navigationStyle":"custom"
+            	}
+            
+        }
+        ,{
+            "path" : "pages/zoom/zoom",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+
+        ,{
+            "path" : "pages/zoom/zoom",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+
+
+        ,{
+            "path" : "pages/login/login",
+            "style":  {
+            	"navigationStyle":"custom"
+            	}
+            
+        }
+        ,{
+            "path" : "pages/zoom/zoom",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/search/search",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "搜索",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/login/login",
+            "style":  {
+            	"navigationStyle":"custom"
+            	}
+
+}
+        ,{
+            "path" : "pages/myrec/myrec",
+            "style" :                                                                                    
+            {
+               "navigationStyle":"custom"
+              
+            }
+            
+        }
+
+            
+        
+
+		,{
+		    "path" : "pages/my/setting/setting",
+		   "style":  {
+		   	"navigationStyle":"custom"
+		   	}
+		    
+		}
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
