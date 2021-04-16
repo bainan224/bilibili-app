@@ -1,25 +1,36 @@
 <template>
-	<view>
-		<h2>动态页面</h2>
-		 <!-- <view class="left" >
-		    <i class="iconfont icon-bianji" @click="onPublish"></i>
-		  </view> -->
+	<uni-nav-bar>
+	<view slot="mod"> 
 	</view>
+	<view slot="right"> 
+	<i class="iconfont icon-bianji" @click="toPublish"></i>
+	</view>
+	</uni-nav-bar>
 </template>
 
 <script>
+	import uniNavBar from '../../components/uni-ui/uni-nav-bar/uni-nav-bar.vue'
 	export default {
+		components:{
+			uniNavBar
+		},
+		
 		data() {
 			return {
 				
 			}
 		},
-		onNavigationBarButtonTap:function(){
-		          uni.navigateTo({
-		          	url:"./publish"
-		          })   
-		 },
+		// onNavigationBarButtonTap:function(){
+		//           uni.navigateTo({
+		//           	url:"./publish"
+		//           })   
+		//  },
 		methods: {
+			toPublish() {
+				uni.navigateTo({
+					url:"./publish"
+				})
+			}
 			
 			
 		}
